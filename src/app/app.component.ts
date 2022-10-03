@@ -1,5 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 
@@ -10,6 +11,7 @@ import { EmployeeService } from './employee.service';
 })
 export class AppComponent implements OnInit {
   public employees: Employee[] = [];
+  public appName: String = environment.appName;
 
   constructor(private employeeService: EmployeeService) { }
 
